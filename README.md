@@ -35,7 +35,7 @@ then run `node demo2.js`
 CLion with emscripten: Settings > Build, Execution, Deployment > CMake,  add following in CMake options:
 
 ```
--DCMAKE_TOOLCHAIN_FILE=/usr/local/opt/emscripten/libexec/cmake/Modules/Platform/Emscripten.cmake
+-DCMAKE_TOOLCHAIN_FILE=~/github/emscripten-core/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake
 ```
 
 
