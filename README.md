@@ -1,6 +1,10 @@
 Emscripten WebAssembly Demo for Deno & Node.js
 ==============================================
 
+# Install Emscripten First
+
+Please follow: https://emscripten.org/docs/getting_started/downloads.html  and install directory is ~/github/emscripten-core/emsdk
+
 # How to build?
 
 ```
