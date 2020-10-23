@@ -1,14 +1,17 @@
 {
-    "name": "emscripten-wasm-c",
-    "repository": "https://github.com/tgm-templates/emscripten-wasm-c",
-    "description": "Emscripten WebAssembly demo for Deno and Node.js",
-    "variables": [
-      {
-        "name": "moduleName",
-        "description": "WebAssembly Module Name"
-      }
-    ],
-    "files": [
-      "CMakeLists.txt", "mod.ts", "build.ts", "README.md"
-    ]
-  }
+  "name": "emscripten-wasm-c",
+  "repository": "https://github.com/tgm-templates/emscripten-wasm-c",
+  "description": "Emscripten C WebAssembly demo for Deno and Node.js",
+  "variables": [
+    {
+      "name": "moduleName",
+      "description": "WebAssembly Module Name"
+    }
+  ],
+  "files": [
+    "CMakeLists.txt",
+    "mod.ts",
+    "build.ts",
+    "README.md"
+  ]
+}
