@@ -1,5 +1,5 @@
-import {encode as base64} from "https://deno.land/std@0.74.0/encoding/base64.ts";
-import {existsSync} from "https://deno.land/std@0.74.0/fs/mod.ts";
+import {encode as base64} from "https://deno.land/std@0.88.0/encoding/base64.ts";
+import {existsSync} from "https://deno.land/std@0.88.0/fs/mod.ts";
 import {compress} from "https://deno.land/x/brotli@v0.1.4/mod.ts";
 
 let moduleName = "@moduleName@";
@@ -31,18 +31,7 @@ async function processModTs(wasmFile: string) {
     console.log("mod.ts proceeded successfully!")
 }
 
-async function convertEsModuleFile(jsFile: string) {
-    let jsCode = await Deno.readTextFile(jsFile);
-    if (jsCode.indexOf("utf-16le") > 0) {
-        jsCode = jsCode.replace("utf-16le", "utf-8");
-        jsCode = "var document={};\n" + jsCode;
-        await Deno.writeTextFile(jsFile, jsCode);
-        console.log(`Success to convert ${jsFile}!`)
-    }
-}
-
 if (existsSync(buildDir)) {
-    await convertEsModuleFile(jsFile);
     await processModTs(wasmFile);
 } else {
     console.log("Please use emcc_camke.sh build first!")
